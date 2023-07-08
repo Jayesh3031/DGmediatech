@@ -19,7 +19,46 @@
   </head>
   <body>
     <div class="cs-preloader cs-center">
-      <div class="cs-preloader_in"></div>
+      <div class=""></div>
+      <div class="blob"></div>
+
+<style>
+.blob {
+   width: 112px;
+   height: 112px;
+   display: grid;
+   
+   filter:   contrast(10);
+   padding: 11.2px;
+   
+}
+
+.blob:before,
+.blob:after {
+   content: "";
+   grid-area: 1/1;
+   background: linear-gradient(#ff4500 0 0) left,
+          linear-gradient(#ff4500 0 0) right;
+   background-size: 22.4px 44.8px;
+   background-origin: content-box;
+   background-repeat: no-repeat;
+}
+
+.blob:after {
+   height: 22.4px;
+   width: 22.4px;
+   margin: auto 0;
+   border-radius: 50%;
+   background: #ff4500;
+   animation: blob-dr86d1 1s infinite;
+}
+
+@keyframes blob-dr86d1 {
+   90%, 100% {
+      transform: translate(300%);
+   }
+}
+</style>
     </div>
     <!-- Start Header Section -->
     <header class="cs-site_header cs-style1 text-uppercase cs-sticky_header">
